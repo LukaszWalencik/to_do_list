@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Scaffold(
+        backgroundColor: Colors.yellow[200],
         appBar: AppBar(
           centerTitle: true,
           backgroundColor: Colors.black,
@@ -22,6 +23,11 @@ class MyApp extends StatelessWidget {
             'To-Do List',
             textAlign: TextAlign.center,
           ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.black,
+          onPressed: () {},
+          child: Icon(Icons.add_box_rounded),
         ),
       ),
     );
