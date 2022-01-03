@@ -14,7 +14,16 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const Scaffold(),
+      home: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          backgroundColor: Colors.black,
+          title: Text(
+            'To-Do List',
+            textAlign: TextAlign.center,
+          ),
+        ),
+      ),
     );
   }
 }
