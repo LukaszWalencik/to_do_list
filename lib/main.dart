@@ -29,6 +29,44 @@ class MyApp extends StatelessWidget {
           onPressed: () {},
           child: Icon(Icons.add_box_rounded),
         ),
+        body: ListView(
+          children: [NewThing('2')],
+        ),
+      ),
+    );
+  }
+}
+
+class NewThing extends StatelessWidget {
+  const NewThing(
+    this.title, {
+    Key? key,
+  }) : super(key: key);
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.yellow[700],
+      padding: EdgeInsets.all(10),
+      child: Row(
+        children: [
+          Text(
+            title,
+            style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.remove_circle,
+              color: Colors.black,
+            ),
+          ),
+        ],
       ),
     );
   }
